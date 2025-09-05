@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist To-Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-tasks"></i> Minimalist To-Do</h1>
+            <div class="app-controls">
+                <input type="text" class="task-input" placeholder="Add a new task...">
+                <input type="date" class="date-input">
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+        
+        <div class="tasks-container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="overdue">Overdue</button>
+            </div>
+            
+            <ul class="task-list">
+                <li class="task-item">
+                    <div class="task-content">
+                        <div class="task-text">Example task</div>
+                        <div class="task-date"><i class="far fa-calendar"></i> September 5, 2025</div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="action-btn complete-btn"><i class="fas fa-check"></i></button>
+                        <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script> src="script.js" </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.header {
+    padding: 25px;
+    background: #6c5ce7;
+    color: white;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-controls {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.task-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+}
+
+.task-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.date-input {
+    width: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn {
+    background: white;
+    color: #6c5ce7;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.tasks-container {
+    padding: 25px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: #6c5ce7;
+    color: white;
+}
+
+.task-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease;
+    border-left: 4px solid #6c5ce7;
+}
+
+.task-item.completed {
+    border-left-color: #00b894;
+    opacity: 0.8;
+}
+
+.task-item.overdue {
+    border-left-color: #d63031;
+}
+
+.task-content {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.task-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.task-date {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    background: transparent;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.complete-btn:hover {
+    background: #00b894;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #d63031;
+    color: white;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+    color: #999;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c3cfe2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a5b4d4;
+}
